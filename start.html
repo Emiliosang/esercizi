@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>HTML Lesson</title>
+    <style>
+      label {
+        display: block;
+      }
+      #form {
+        display: inline
+      }
+    </style>
+  </head>
+
+  <body>
+    <label for="email">Insert here your email:
+      <input type="email" required>
+    </label>
+
+    <label for="pass">Insert here your password:
+      <input type="password" required>
+    </label>
+
+    <label for="FName">Insert here your first name:
+      <input type="text" required>
+    </label>
+
+    <label for="LName">Insert here your last name:
+      <input type="text" required>
+    </label>
+
+    <label for="DateOfBirthday">Insert your date of birthday:
+      <input type="date" required>
+    </label>
+
+    <label for="TelephoneNumber">Insert here your telephone number:
+       <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+    </label>
+
+    <label for="ChoosingPlan">Choose your plane:
+      <select name="ChoosingPlane">
+        <option value="Free">Free plane</option>
+        <option value="Bronze">Bronze plane 8$</option>
+        <option value="Silver">Silver plane 10$</option>
+        <option value="Gold">Gold plane 12$</option>
+        <option value="Pro">Pro plane 15$</option>
+      </select>     
+    </label>
+
+    <form>
+      <input type="checkbox" id="Free" >
+      <label id="form" for="Free"> Free plane</label><br>
+      <input type="checkbox" id="Bronze">
+      <label id="form" for="Bronze"> Bronze plane 8$</label><br>
+      <input type="checkbox" id="Silver">
+      <label id="form" for="Silver"> Silver plane 10$</label><br>
+      <input type="checkbox" id="Gold">
+      <label id="form" for="vehicle3"> I have a boat 12$</label><br>
+      <input type="checkbox" id="Pro">
+      <label id="form" for="Gold"> I have a boat 15$</label>
+    </form>
+    <!--non ho capito come impostare quest'ultima parte del choosing plane-->
+
+    <label for="CardNumber">Insert here your credit card number:
+      <input type="number" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" required maxlength="16">
+    </label>
+
+    <label for="CVV">Insert here your CVV:
+      <input type="number" pattern="[0-9]{4}" required maxlength="4">
+    </label>
+
+    <label for="ExpirationDate">Insert your Expiration date:
+      <input type="month" required>
+    </label>
+
+    <label for="BillingAddress">Insert your billing address:
+      <input type="text" required>
+    </label>
+  </body>
+</html>
