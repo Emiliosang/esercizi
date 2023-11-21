@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+}
+aside{
+    width: 200px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    background-color: tomato;
+    justify-content: space-between;
+}
+a{
+    color: white;
+    transition: color 0.3s;
+    text-decoration: none;
+    margin: 10px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+a:hover{
+    color: #2b2bb2;
+}
+.placeholder > img{
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    border: 1px solid black;
+
+}
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    align-self: center; 
+    padding-bottom: 20px ;
+}
+.user > img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+div > p{
+    color: white;
+}
