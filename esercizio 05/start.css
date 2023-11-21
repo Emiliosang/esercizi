@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: space-between;
+    gap: 5%;
+}
+#yellow{
+    order: -1;
+}
+#red{
+    order: -1;
+}
+#orange{
+    flex-grow: 2;
+}
