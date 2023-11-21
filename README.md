@@ -1,3 +1,6 @@
-# Array Methods Advanced
+# Classes
 
-Create a function called `sortPeopleByAge` that returns the people in ascending order by age.
+Define a class called `Person` that takes in two arguments (`firstName` and `lastName`) in the constructor.
+
+const developer = new Person('Mario', 'Rossi');
+console.log(developer.firstName + " " + developer.lastName);
