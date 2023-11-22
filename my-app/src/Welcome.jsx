@@ -1,6 +1,6 @@
 import Age from './Age';
 
-export function Welcome({ name, age }) {
+function Welcome({ name, age }) {
   return (
     <div>
       <p>
@@ -9,7 +9,9 @@ export function Welcome({ name, age }) {
         {age && <Age age={age} />}
         {age > 18 && <Age age={age} />}
         {(age > 18 && age < 65) && <Age age={age} />}
-        {(age > 18 && age < 65) && <Age age={age} />}
+        {(age > 18 && age < 65 && name === "John") && <Age age={age} />}
     </div>
   );
 }  
+
+export default Welcome
