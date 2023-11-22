@@ -3,7 +3,8 @@ import AlertClock from './AlertClock';
 
 function App() {
   const handleAlertClick = () => {
-    AlertClock();
+      const currentTime = new Date().toLocaleTimeString();
+      alert(`Current time is: ${currentTime}`);
   };
 
   return (
