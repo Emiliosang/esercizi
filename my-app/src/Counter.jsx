@@ -1,18 +1,18 @@
 import React from "react"
 import { useState } from "react"
 
-export function Counter({ initialValue = 0 }) {
-
-   const [ counter, setCounter ] = useState(initialValue)
-
-   function handleCounterIncrement() {
-      setCounter((c) => c + 1)
-   }
-
+function Counter({ initialCounter, incrementAmount }) {
+   const [counter, setCounter] = useState(initialCounter);
+    
+   const handleIncrement = () => {
+      setCounter(prevCounter => prevCounter + incrementAmount);
+   };
+    
    return (
       <div>
-      <h2>i have counted to {counter}</h2>
-         <button onClick={handleCounterIncrement}>Increment</button>
+         <h2>Counter Value: {counter}</h2>
+         <button onClick={handleIncrement}>Increment</button>
       </div>
    )
 }
+export default Counter
