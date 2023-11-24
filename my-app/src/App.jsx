@@ -1,12 +1,19 @@
-import Container from "./Container"
-import "./style.css"
+import LanguageProvider from "./LanguageContext";
+import Clock from "./Clock"
 
 function App() {
   return (
-    <Container title={<h1>Questo è il titolo</h1>}>
-      <div className="styledDiv">Ciao</div>
-    </Container>
-  )
+    <LanguageProvider>
+      <div>
+        <h1>Language Selector</h1>
+        <select name="LanguageSelector" id="LanguageSelector">
+          <option value="it">IT</option>
+          <option value="en">EN</option>
+        </select>
+      </div>
+      <Clock />
+    </LanguageProvider>
+  );
 }
 
 export default App
