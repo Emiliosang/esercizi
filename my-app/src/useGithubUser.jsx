@@ -10,7 +10,7 @@ export default function useGithubUser(username) {
         setError(null)
 
         try{
-            const response = await fetch(`https//api.github.com/users/${username}`)
+            const response = await fetch(`https://api.github.com/search/users?q=${username}`)
             const json = await response.json()
             setData(json)
 

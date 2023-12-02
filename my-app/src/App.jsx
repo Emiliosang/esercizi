@@ -8,3 +8,5 @@ function App() {
   )
 }
 export default App
+
+//non capisco perché non mi carica il nome
