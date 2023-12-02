@@ -1,19 +1,13 @@
 import useGithubUser from "./useGithubUser"
 
-function GithubUser({username}) {
-    const { data, handleUsername } = useGithubUser(username)
-    
+export default function GithubUser(username) {
+    const {data, loading, error} = useGithubUser()
+
     return (
-        <>
-            <form onSubmit={handleUsername}>
-                <input type="text" name="username" />
-                <button type="submit" >Fetch</button>
-            </form>
-            {data && <h1>Username: {data.items[0].login}</h1>}
-            {data && <h2>ID: {data.items[0].id}</h2>}
-            {data && <img srcSet={data.items[0].avatar_url}></img>}
-        </>
+        <div>
+            {loading && <h1>Loading...</h1>}
+            {error && <h1>There has been an error</h1>}
+            {data && <h1>{data.name}</h1>}
+        </div>
     )
 }
-
-export default GithubUser

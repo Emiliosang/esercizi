@@ -3,7 +3,7 @@ import GithubUser from "./GithubUser"
 function App() {
   return (
   <>
-    <GithubUser />
+    <GithubUser username="emiliosang" />
   </>
   )
 }
