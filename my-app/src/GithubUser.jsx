@@ -1,21 +1,8 @@
-import { useEffect, useState } from "react"
+import useGithubUser from "./useGithubUser"
 
-function GithubUser() {
-    const [data, setData] = useState(null)
-    const [username, setUsername] = useState(null)
-
-    async function fetchGithubUser() {
-        const response = await fetch(`https://api.github.com/search/users?q=${username}`)
-        const json = await response.json()
-        setData(json)
-    }
-    function handleUsername(e) {
-        e.preventDefault()
-        setUsername(e.target.username.value)
-    }
-    useEffect(() => {
-        fetchGithubUser(username)
-    },[username])
+function GithubUser({username}) {
+    const { data, handleUsername } = useGithubUser(username)
+    
     return (
         <>
             <form onSubmit={handleUsername}>
