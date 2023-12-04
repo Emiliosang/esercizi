@@ -1,12 +1,17 @@
-import React from "react";
-import GithubUser from "./GithubUser";
+import React from 'react';
+import { SWRConfig } from 'swr';
+import AppContent from './AppContent';
 
-function App() {
+const fetcher = async (...args) => {
+  const response = await fetch(...args);
+  const data = await response.json();
+  return data;
+};
+
+export default function App() {
   return (
-    <>
-      <GithubUser />
-    </>
+    <SWRConfig value={{ fetcher }}>
+      <AppContent />
+    </SWRConfig>
   );
 }
-
-export default App
