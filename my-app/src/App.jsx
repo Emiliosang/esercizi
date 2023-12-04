@@ -1,10 +1,10 @@
-import FocusableInput from "./FocusableInput"
+import MountMessage from "./MountedMessage"
 
 function App() {
 
   return (
     <>
-      <FocusableInput />
+      <MountMessage />
     </>
   )
 }
