@@ -4,20 +4,21 @@ export default function useGithubUser() {
   const [data, setData] = useState(null);
   const [username, setUsername] = useState("");
 
-  useEffect(() => {
+  const fetchGithubUser = async () => {
     if (username) {
-      const fetchGithubUser = async () => {
-        const response = await fetch(`https://api.github.com/search/users?q=${username}`);
-        const json = await response.json();
-        setData(json);
-      };
-
-      fetchGithubUser();
+      const response = await fetch(`https://api.github.com/search/users?q=${username}`);
+      const json = await response.json();
+      setData(json);
     }
+  };
+
+  useEffect(() => {
+    fetchGithubUser();
   }, [username]);
 
   return {
     data,
     setUsername,
+    refetch: fetchGithubUser,
   };
 }

@@ -1,8 +1,6 @@
-import React from "react";
 import useGithubUser from "./useGithubUser";
-
 export default function GithubUser() {
-  const { data, setUsername } = useGithubUser();
+  const { data, setUsername, refetch } = useGithubUser();
 
   return (
     <div>
@@ -22,6 +20,7 @@ export default function GithubUser() {
           <img src={data.items[0].avatar_url} alt="GitHub Avatar" />
         </>
       )}
+      <button onClick={refetch}>Refetch Data</button>
     </div>
   );
 }
