@@ -1,18 +1,12 @@
-import React, { useState } from 'react';
-import GithubUser from './GithubUser';
+import React from "react";
+import GithubUser from "./GithubUser";
 
 function App() {
-  const [username, setUsername] = useState('');
-
-  const handleUsernameChange = (e) => {
-    setUsername(e.target.value);
-  };
-
   return (
     <>
-      <GithubUser username={username} />
+      <GithubUser />
     </>
   );
 }
 
-export default App;
+export default App

@@ -1,37 +1,27 @@
-import React, { useState } from 'react';
+import React from "react";
+import useGithubUser from "./useGithubUser";
 
-function GithubUser() {
-  const [username, setUsername] = useState('');
-  const [data, setData] = useState(null);
-
-  const handleFetchUser = async () => {
-    try {
-      const response = await fetch(`https://api.github.com/search/users?q=${username}`);
-      const json = await response.json();
-      setData(json);
-    } catch (error) {
-      console.error('Errore nel recupero dell\'utente GitHub', error);
-    }
-  };
+export default function GithubUser() {
+  const { data, setUsername } = useGithubUser();
 
   return (
-    <>
-      <input
-        type="text"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-        placeholder="Inserisci il nome utente di GitHub"
-      />
-      <button onClick={handleFetchUser}>Recupera Utente</button>
+    <div>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          setUsername(e.target.username.value);
+        }}
+      >
+        <input type="text" name="username" placeholder="Enter username" />
+        <button type="submit">Fetch</button>
+      </form>
       {data && (
         <>
           <h1>Username: {data.items[0].login}</h1>
           <h2>ID: {data.items[0].id}</h2>
-          <img src={data.items[0].avatar_url} alt="Avatar" />
+          <img src={data.items[0].avatar_url} alt="GitHub Avatar" />
         </>
       )}
-    </>
+    </div>
   );
 }
-
-export default GithubUser;
