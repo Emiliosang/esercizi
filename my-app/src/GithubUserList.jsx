@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, Navigate } from "react-router-dom";
 import ShowGithubUser from "./ShowGithubUser";
 
 export default function GithubUserList() {
@@ -14,7 +14,7 @@ export default function GithubUserList() {
 
   return (
     <>
-      <p>Github User List</p>
+      <p>Add a user and select it</p>
       <ul>
         {users.map((user) => (
           <li key={user.id}>
@@ -23,6 +23,7 @@ export default function GithubUserList() {
         ))}
       </ul>
       <Routes>
+        <Route index element={<Navigate to="/users" replace />} />
         <Route path=":username" element={<ShowGithubUser />} />
       </Routes>
     </>
