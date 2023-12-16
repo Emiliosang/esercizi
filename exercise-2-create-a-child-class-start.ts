@@ -16,6 +16,10 @@ class Currency {
 
         console.log(description);
     }
+
+    public getName(): string {
+        return this.name;
+    }
 }
 
 class DetailedCurrency extends Currency {
@@ -27,8 +31,8 @@ class DetailedCurrency extends Currency {
         this.banknotes = banknotes;
     }
 
-    public describeBankNotes() {
-        let description = `The ${this.name} currency uses the banknotes `;
+    public describeBankNotes(): void {
+        let description = `The ${this.getName()} currency uses the banknotes `;
 
         description += this.banknotes.join(", ");
 
@@ -41,7 +45,5 @@ const euroCurrency = new DetailedCurrency("Euro", "EUR", "€", [500, 200, 100, 
 euroCurrency.describe();
 
 euroCurrency.describeBankNotes();
-
-// ----
 
 export {};
