@@ -1,4 +1,4 @@
-const greetFunction = require('./greet');
+import greetFunction from './greet.mjs';
 
 const greetingMessage = greetFunction('Emilio');
 
