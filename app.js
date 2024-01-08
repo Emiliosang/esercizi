@@ -1,2 +1,5 @@
-const createDropdownMenu = require('./menuCreator');
-createDropdownMenu(['Option 1', 'Option 2', 'Option 3']);
+const greetFunction = require('./greet');
+
+const greetingMessage = greetFunction('Emilio');
+
+console.log(greetingMessage);
