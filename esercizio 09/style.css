@@ -1,24 +1,28 @@
 @media (max-width: 768px) {
-    nav, #main {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-    }
+  div, #navbar, a, #spanDropdown, #Dropdown, option, button {
+    display: none;
   }
-  @media (max-width: 1920px) {
-    nav, #main {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+  svg {
+    display: inline;
   }
-  body{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 18px;
+
+}
+@media (min-width: 769px) {
+  nav, #main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  svg {
+    display: none;
+  }
+}
+body{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 18px;
 }
 nav{
   background-color: rgb(63, 63, 63);
-
 }
 h3, a{
   padding-right: 20px;
@@ -68,4 +72,7 @@ button{
   background: none;
   color:lightgrey;
   font-size: 18px;
+}
+svg{
+  height: 40px;
 }
