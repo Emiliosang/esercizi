@@ -1,0 +1,78 @@
+@media (max-width: 768px) {
+  div, #navbar, a, #spanDropdown, #Dropdown, option, button {
+    display: none;
+  }
+  svg {
+    display: inline;
+  }
+
+}
+@media (min-width: 769px) {
+  nav, #main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  svg {
+    display: none;
+  }
+}
+body{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 18px;
+}
+nav{
+  background-color: rgb(63, 63, 63);
+}
+h3, a{
+  padding-right: 20px;
+}
+h3{
+  font-size: 20px;
+  padding-left: 10px;
+  display: inline;
+  color: white;
+}
+a{
+  text-decoration: none;
+}
+#firstA{
+  color: whitesmoke;
+}
+#secondA{
+ color:lightgrey;
+}
+#disabledButton{
+  color:grey;
+  padding-left: 10px;
+}
+button{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+}
+#disabled{
+  border: none;
+  background: none;
+  color: rgb(104, 104, 104);
+}
+#searchButton{
+  padding: 9px;
+  background: none;
+  border: 1px solid green;
+  color: green;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+#searchBar{
+  height: 43px;
+  border-radius: 5px;
+}
+#dropdown{
+  border: none;
+  background: none;
+  color:lightgrey;
+  font-size: 18px;
+}
+svg{
+  height: 40px;
+}
