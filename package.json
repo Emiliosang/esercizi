@@ -1,22 +1,9 @@
 {
   "dependencies": {
     "express": "^4.18.2",
-    "express-async-errors": "^3.1.1",
-    "joi": "^17.12.0",
-    "morgan": "^1.10.0",
-    "typescript": "^5.3.3"
+    "pg-promise": "^11.5.4",
+    "tsc": "^2.0.4"
   },
-  "name": "esercizi",
-  "version": "1.0.0",
-  "main": "planetRouter.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node planetRouter.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "devDependencies": {
     "@types/express": "^4.17.21"
   }
