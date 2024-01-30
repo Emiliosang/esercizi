@@ -1,6 +1,6 @@
-import passport from 'passport';
-import { Strategy, ExtractJwt } from 'passport-jwt';
-import dotenv from 'dotenv';
+const passport = require('passport');
+const { Strategy, ExtractJwt } = require('passport-jwt');
+const dotenv = require('dotenv');
 
 dotenv.config();
 

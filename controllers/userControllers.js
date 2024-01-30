@@ -1,4 +1,4 @@
-import db from "../database.js"
+const db = require('./database');
 
 const create = async (req, res) => {
 
