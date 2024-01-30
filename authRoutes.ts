@@ -45,5 +45,14 @@ router.post('/users/login', async (req: Request, res: Response) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
+router.get('/users/logout', passport.authenticate('jwt', { session: false }), async (req: Request, res: Response) => {
+  try {
+    await db.none('UPDATE users SET token=NULL WHERE id=$1', [req.user.id]);
+    res.json({ msg: 'Logout successful.' });
+  } catch (error) {
+    console.error('Error logging out user:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+})
 
 export default router;
