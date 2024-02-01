@@ -26,3 +26,5 @@ SET price = 12.99, stock_count = 4
 WHERE title = "War and Peace";
 
 GRANT SELECT, UPDATE ON Books TO martin@localhost;
+
+REVOKE UPDATE ON Books FROM martin@localhost;
