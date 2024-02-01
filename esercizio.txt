@@ -9,3 +9,7 @@
    rating REAL NOT NULL,
    stock_count INTEGER
  )
+
+ALTER TABLE Books
+ADD COLUMN publisher TEXT,
+ADD COLUMN num_pages INTEGER;
