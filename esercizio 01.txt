@@ -1,0 +1,11 @@
+ CREATE TABLE Books (
+   book-id INTEGER PRIMARY KEY,
+   title TEXT NOT NULL,
+   author TEXT NOT NULL,
+   genre TEXT NOT NULL,
+   published-year INTEGER NOT NULL,
+   isbn TEXT NOT NULL,
+   price REAL NOT NULL,
+   rating REAL NOT NULL,
+   stock_count INTEGER
+ )
